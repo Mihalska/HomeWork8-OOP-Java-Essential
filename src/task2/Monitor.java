@@ -1,18 +1,18 @@
 package task2;
 
 public class Monitor extends Device {
-    int resolutionX;
-    int resolutionY;
+    int resolutionX = 1280;
+    int resolutionY = 1024;
 
     Monitor(int resolutionX, int resolutionY) {
-        super("Samsung", 120, "AB1234567CD 1024");
+        super("Samsung", 120, "AB1234567CD");
         this.resolutionX = resolutionX;
         this.resolutionY = resolutionY;
     }
 
     @Override
     public String toString() {
-        return String.format("Device: manufacturer = %s,price = %d,serialNumber =%s", getManufacturer(), (int) getPrice(), getSerialNumber());
+        return String.format("Device: manufacturer = %s,price = %d,serialNumber =%s, X=%d,Y=%d", getManufacturer(), (int) getPrice(), getSerialNumber(), resolutionX , resolutionY );
     }
 
     @Override

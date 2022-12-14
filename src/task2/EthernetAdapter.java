@@ -5,13 +5,13 @@ public class EthernetAdapter extends Device {
     String mac;
 
     public EthernetAdapter(int speed, String mac) {
-        super("Samsung", 120, "AB1234567CD 1024" );
+        super("Samsung", 120, "AB1234567CD" );
         this.speed = speed;
         this.mac = mac;
     }
     @Override
     public  String toString() {
-        return String.format("Device: manufacturer = %s,price = %d,serialNumber =%s", getManufacturer() ,(int)getPrice() , getSerialNumber() );
+        return String.format("Device: manufacturer = %s,price = %d,serialNumber =%s, X=%d,Y=%s", getManufacturer() ,(int)getPrice() , getSerialNumber(), speed , mac  );
     }
     @Override
     public boolean equals (Object obj) {
